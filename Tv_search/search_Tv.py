@@ -75,7 +75,7 @@ def get_url(name):
             for div in result_divs:
                 # 如果要获取标签内的文本内容
                 # print(etree.tostring(div, pretty_print=True).decode())
-                for element in div.xpath(".//tba[class=glshle]"):
+                for element in div.xpath(".//tba[@class='glshle']"):
                     if element.text is not None:
                         m3u8_list.append(element.text.strip())
                         print(element.text.strip())
