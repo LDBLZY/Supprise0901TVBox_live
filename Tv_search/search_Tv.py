@@ -62,7 +62,7 @@ def get_url(name):
         time.sleep(3)
         # 搜索页数
         m3u8_list = []
-        for i in range(2):
+        for i in range(1):
             url = f"http://tonkiang.us/?page={i + 1}&name={name}"
             time.sleep(3)
             response = requests.post(url, headers=headers, data=data, cookies=cookie, verify=False)
@@ -70,10 +70,10 @@ def get_url(name):
             # 将 HTML 转换为 Element 对象
             root = etree.HTML(response.text)
             result_divs = root.xpath("//div[@class='resultplus']")
-            # print(result_divs)
+            print(result_divs)
             # 打印提取到的 <div class="result"> 标签
             for div in result_divs:
-                print(div.xpath("//table"))
+                # print(div.xpath("//table"))
                 # 如果要获取标签内的文本内容
                 # print(etree.tostring(div, pretty_print=True).decode())
                 for element in div.xpath(".//tba[@class='glshle']"):
