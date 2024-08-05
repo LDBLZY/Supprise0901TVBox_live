@@ -63,7 +63,7 @@ def get_url(name):
         # 搜索页数
         m3u8_list = []
         for i in range(2):
-            url = f"http://tonkiang.us/?page={i + 1}&s={name}"
+            url = f"http://tonkiang.us/?page={i + 1}&name={name}"
             time.sleep(3)
             response = requests.post(url, headers=headers, data=data, cookies=cookie, verify=False)
             print(response.text)
