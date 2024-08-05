@@ -1,4 +1,4 @@
-import requests
+8import requests
 from lxml import etree
 import os
 import threading
@@ -73,9 +73,11 @@ def get_url(name):
             
             # 打印提取到的 <div class="result"> 标签
             for div in result_divs:
-                print('aaa')
+                print('...aaa...')
+                print(etree.tostring(div, pretty_print=True))
+                print('...nnn...')
                 # 如果要获取标签内的文本内容
-                print(etree.tostring(div, pretty_print=True).decode())
+                # print(etree.tostring(div, pretty_print=True).decode())
                 # for element in div.xpath(".//tba[@class='glshle']"):
                 #    if element.text is not None:
                 #        m3u8_list.append(element.text.strip())
