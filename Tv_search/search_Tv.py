@@ -29,7 +29,7 @@ import sys
 #         # print(response.text)
 #         # 将 HTML 转换为 Element 对象
 #         root = etree.HTML(response.text)
-#         result_divs = root.xpath("//div[@class='result']")
+#         result_divs = root.xpath("//div[@class='gaxgfi']")
 #
 #         # 打印提取到的 <div class="result"> 标签
 #         m3u8_list = []
