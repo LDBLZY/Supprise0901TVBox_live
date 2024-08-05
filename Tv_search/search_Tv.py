@@ -62,14 +62,15 @@ def get_url(name):
         time.sleep(3)
         # 搜索页数
         m3u8_list = []
-        for i in range(3):
+        for i in range(2):
             url = f"http://tonkiang.us/?page={i + 1}&s={name}"
             time.sleep(3)
             response = requests.post(url, headers=headers, data=data, cookies=cookie, verify=False)
-            print(response.text)
+            # print(response.text)
             # 将 HTML 转换为 Element 对象
             root = etree.HTML(response.text)
             result_divs = root.xpath("//div[@class='gaxgfi']")
+            print result_divs
             # 打印提取到的 <div class="result"> 标签
             for div in result_divs:
                 # 如果要获取标签内的文本内容
