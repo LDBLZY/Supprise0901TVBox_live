@@ -247,6 +247,7 @@ if __name__ == '__main__':
                 m3u8_list = get_url(name)
                 tv_dict[name] = m3u8_list
                 print(name)
+                print(m3u8_list)
             print('---------字典加载完成！------------')
         for name, m3u8_list in tv_dict.items():
             detectLinks(name, m3u8_list)
