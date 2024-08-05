@@ -66,11 +66,11 @@ def get_url(name):
             url = f"http://tonkiang.us/?page={i + 1}&name={name}"
             time.sleep(3)
             response = requests.post(url, headers=headers, data=data, cookies=cookie, verify=False)
-            print(response.text)
+            # print(response.text)
             # 将 HTML 转换为 Element 对象
             root = etree.HTML(response.text)
             result_divs = root.xpath("//div[@class='resultplus']")
-            print(result_divs)
+            # print(result_divs)
             # 打印提取到的 <div class="result"> 标签
             for div in result_divs:
                 print(div.xpath("//table"))
