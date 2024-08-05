@@ -255,7 +255,7 @@ if __name__ == '__main__':
         tv_dict.clear()
 
     time.sleep(10)
-    os.remove('video.ts')
+    # os.remove('video.ts')
     # 直播源去重
     re_dup(output_file_path)
 
