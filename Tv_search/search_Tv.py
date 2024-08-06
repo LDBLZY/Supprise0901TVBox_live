@@ -64,6 +64,7 @@ def get_url(name):
         m3u8_list = []
         for i in range(1):
             url = f"http://tonkiang.us/?page={i + 1}&name={name}"
+            print(url)
             time.sleep(3)
             response = requests.post(url, headers=headers, data=data, cookies=cookie, verify=False)
             print(response.text)
