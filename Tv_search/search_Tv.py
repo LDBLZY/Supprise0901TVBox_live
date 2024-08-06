@@ -57,8 +57,8 @@ def get_url(name):
         "Submit": " "
     }
     try:
-        res = requests.get(url, headers=headers, data=data, verify=False)
-        cookie = res.cookies
+        # res = requests.get(url, headers=headers, data=data, verify=False)
+        # cookie = res.cookies
         time.sleep(5)
         # 搜索页数
         m3u8_list = []
@@ -67,7 +67,7 @@ def get_url(name):
             print(url)
             time.sleep(5)
             # response = requests.post(url, headers=headers, data=data, cookies=cookie, verify=False)
-            response = requests.get(url, headers=headers, data=data, cookies=cookie, verify=False)
+            response = requests.get(url, headers=headers, verify=False)
 
             print(response.text)
             # 将 HTML 转换为 Element 对象
